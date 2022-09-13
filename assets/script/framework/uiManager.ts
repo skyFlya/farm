@@ -52,7 +52,7 @@ export class uiManager {
      * @param {Array} args
      * @param {Function} cb 回调函数，创建完毕后回调
      */
-    showDialog (panelPath: string, args?: any, cb?: Function) {
+    showDialog (panelPath: string, args?: any, cb?: Function, parent?:Node) {
         if (this.dictLoading[panelPath]) {
             return;
         }
@@ -78,7 +78,7 @@ export class uiManager {
 
                 return;
             }
-        }
+        }        
 
         this.dictLoading[panelPath] = true;
         resourceUtil.createUI(panelPath, (err, node) => {
@@ -109,7 +109,7 @@ export class uiManager {
                 //如果在显示前又被关闭，则直接触发关闭掉
                 this.hideDialog(panelPath);
             }
-        });
+        }, parent);
     }
 
     /**

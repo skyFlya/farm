@@ -1,6 +1,6 @@
 export namespace eventName{    
-    /**鱼塘鱼刷新 */
-    export const FISH_UPDATE = "FISH_UPDATE";
+    /**金币刷新 */
+    export const GOLD_UPDATE = "GOLD_UPDATE";
     
 
 }

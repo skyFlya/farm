@@ -18,19 +18,19 @@ export class dataManage {
         return this._instance;
     }
 
-    private fishJson: gameData.fish[] = [];
+    private farmJson: gameData.farmData[] = [];
 
     public init() {
-        resourceUtil.getJsonData("json/fish", (err, content) => {            
-            this.fishJson = content;
+        resourceUtil.getJsonData("json/farm", (err, content) => {            
+            this.farmJson = content;
         });
     }
 
-    public getFishData(lv: number): gameData.fish {
-        let fishJson = this.fishJson;
-        for (let i = 0; i < fishJson.length; i++) {
-            if (fishJson[i].lv == lv) {
-                return util.Instance.deepCopy(fishJson[i])                
+    public getFarmData(lv: number): gameData.farmData {
+        let farmJson = this.farmJson;
+        for (let i = 0; i < farmJson.length; i++) {
+            if (Number(farmJson[i].lv) == lv) {
+                return util.Instance.deepCopy(farmJson[i])                
             }
         }
     }

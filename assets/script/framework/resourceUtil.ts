@@ -113,8 +113,7 @@ export class resourceUtil {
             node.setPosition(0, 0, 0);
             if (!parent) {
                 parent = find("Canvas");
-            }
-
+            }            
             parent!.addChild(node);
             if(cb){
                 cb(null, node);
