@@ -511,8 +511,12 @@
     "gameLayout": {
       "__id__": 5
     },
-    "uiLayout": null,
-    "popLayout": null,
+    "uiLayout": {
+      "__id__": 8
+    },
+    "popLayout": {
+      "__id__": 11
+    },
     "_id": "58iw6TOMxL7Zezzio+2GWO"
   },
   {

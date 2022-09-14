@@ -4,4 +4,5 @@ export class uiNameConst {
 
     //游戏界面
     public static Game = "game";
+
 }

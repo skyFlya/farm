@@ -48,8 +48,7 @@ export class poolManager {
             this.dictPool[name] = pool;
 
             node = instantiate(prefab);
-        }
-
+        }        
         node.parent = parent;
         return node;
     }

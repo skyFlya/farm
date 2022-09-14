@@ -1,4 +1,5 @@
 import { _decorator, Component, Node, Vec3, UITransform, Prefab, instantiate } from 'cc';
+import { gameTipManage } from '../../manage/gameTipManage';
 const { ccclass, property } = _decorator;
 
 @ccclass('game')
@@ -11,8 +12,11 @@ export class game extends Component {
     private bg: Node = null;
 
     @property(Prefab)
-    private farm:Prefab = null;
-    
+    private farm: Prefab = null;
+
+    @property(Prefab)
+    private gameTip:Prefab = null;
+
 
     private startPos: Vec3;
     private maxMoveX = 0;
@@ -25,6 +29,9 @@ export class game extends Component {
 
         this.maxMoveX = this.bg.getComponent(UITransform).width / 2 - screen.width;
         this.maxMoveY = this.bg.getComponent(UITransform).height / 2 - screen.height;
+
+        //加载游戏提示层
+        gameTipManage.instance.init(this.gameTip);
 
         this.moveNode.addChild(instantiate(this.farm));
     }

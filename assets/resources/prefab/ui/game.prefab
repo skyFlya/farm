@@ -401,6 +401,10 @@
       "__uuid__": "299a0820-546c-4c8e-815b-18d2801d0e8c",
       "__expectedType__": "cc.Prefab"
     },
+    "gameTip": {
+      "__uuid__": "73c464dc-383b-4b8e-a212-575b81a7d33c",
+      "__expectedType__": "cc.Prefab"
+    },
     "_id": ""
   },
   {

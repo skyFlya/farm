@@ -1,6 +1,7 @@
 import { _decorator, Component, Node, Label, CCObject, Sprite } from 'cc';
-import { eventName } from '../const/eventName';
-import { clientEvent } from '../framework/clientEvent';
+import { eventName } from '../../const/eventName';
+import { clientEvent } from '../../framework/clientEvent';
+
 const { ccclass, property } = _decorator;
 
 @ccclass('home')

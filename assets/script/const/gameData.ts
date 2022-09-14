@@ -1,3 +1,5 @@
+import { Component, Label } from "cc";
+
 export namespace gameData {
     export interface farmData {
         lv: string,
@@ -5,6 +7,12 @@ export namespace gameData {
         curCropper: number,
         curtime: number,
         isOpen: boolean,
+    }
+
+    export interface timerItem {
+        ts: Component,               //文本
+        isCanAdd: boolean            //是否能加速
+        time: number,                //剩余时间
     }
 
     export enum fishState {
